@@ -1,14 +1,14 @@
-@use "variables";
+@use 'variables';
 @use 'fonts';
-@import "./mixins";
+@import './mixins';
 
 @font-face {
-  font-family: "roboto";
+  font-family: 'roboto';
   src: url(../fonts//Roboto-Regular.ttf);
 }
 
 * {
-  font-family: "roboto";
+  font-family: 'roboto';
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -30,9 +30,9 @@ p,
 button,
 input,
 div {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
-a{
+a {
   text-decoration: none;
 }
 
@@ -45,12 +45,11 @@ h2 {
 
 .scroll-reveal-content.visible {
   opacity: 1;
-  
 }
-.miraculous-effect{
+.miraculous-effect {
   padding-top: 2rem;
 }
-.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+// .visible {
+//   opacity: 1;
+//   transform: translateY(0);
+// }

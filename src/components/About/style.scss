@@ -1,0 +1,39 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+@use '../../styles/fonts';
+@import '../../styles/global';
+
+.about {
+  @include mixins.container(100%, 0, 1rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .about-image img {
+    width: 600px;
+    border-radius: 50%;
+  }
+  .about-text {
+    width: 100%;
+    max-width: 850px;
+    line-height: 1.5;
+
+    h1 {
+      @include mixins.font-properties(3rem, 600);
+      @include mixins.font-family('Roboto Condensed Medium');
+      background: linear-gradient(50deg, #052555, #0666c5 55%, #0580f2);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: right;
+    }
+    p,
+    span {
+      @include mixins.font-properties(1.5rem);
+    }
+    span {
+      color: variables.$blue;
+      padding-left: 0.5rem;
+    }
+  }
+}

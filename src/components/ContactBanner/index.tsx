@@ -1,14 +1,43 @@
 import './style.scss';
 import person from '../../assets/person.png';
 import { svgs } from '../../helpers/svgs';
+import useAnimatedText from '../../hooks/useAnimatedText';
+import { useEffect } from 'react';
+import { useAnimation, motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 export const ContactBanner = () => {
+  const animetedText = useAnimatedText(
+    'Para transformar suas ideias em experiências incríveis?'
+  );
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    } else {
+      controls.start('hidden');
+    }
+  }, [controls, inView]);
+
   return (
     <div className="contact-banner">
-      <div className="contact-banner-details">
+      <motion.div
+        className="contact-banner-details"
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={{
+          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+        }}
+      >
         <p>Precisa de um</p>
         <p className="contact-banner-name-dev">Desenvolvedor Web</p>
-        <p>Para transformar suas ideias em experiências incríveis?</p>
+        <p>{animetedText}</p>
 
         <div className="contact-banner-icons">
           {svgs.map((s) => (
@@ -25,7 +54,7 @@ export const ContactBanner = () => {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
       <div className="contact-banner-image">
         <img src={person} alt="person" />
       </div>

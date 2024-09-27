@@ -1,7 +1,8 @@
+import { About } from '../../components/About';
 import { Carousel } from '../../components/Carousel';
 import { ContactBanner } from '../../components/ContactBanner';
 import { Header } from '../../components/Header';
-import './style.scss';
+import { MyProjects } from '../../components/MyProjects';
 export const Home = () => {
   return (
     <div className="home">
@@ -9,6 +10,8 @@ export const Home = () => {
       <main>
         <ContactBanner />
         <Carousel />
+        <About />
+        <MyProjects />
       </main>
     </div>
   );

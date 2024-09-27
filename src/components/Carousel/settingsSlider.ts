@@ -3,9 +3,11 @@ export const settings = {
   infinite: true,
   speed: 2000,
   slidesToShow: 20,
+
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 0,
+
   arrows: false,
   cssEase: 'ease-in-out',
   responsive: [
