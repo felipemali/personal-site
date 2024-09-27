@@ -1,0 +1,11 @@
+.carousel {
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(to right, #1e3a8a, #3b82f6);
+  border-image-slice: 1;
+  padding: 0rem 0;
+
+  svg {
+    margin-top: 0.5rem;
+  }
+}

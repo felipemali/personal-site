@@ -1,0 +1,54 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(38 38 38 / 1);
+  // box-shadow: #0a0a0a;
+  width: 80%;
+  margin: 0 auto 1rem auto;
+  padding: 0.5rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 6px -2px rgba(0, 0, 0, 0.5);
+
+  .header-name {
+    span {
+      width: 150px;
+      color: variables.$blue;
+      @include mixins.font-family('Allura Regular');
+      @include mixins.font-properties(2.5rem);
+    }
+  }
+
+  .header-options {
+    display: flex;
+    align-items: center;
+
+    span,
+    button {
+      @include mixins.font-family('Roboto Condensed SemiBold');
+    }
+
+    span {
+      margin-left: 1.5rem;
+    }
+    span:hover {
+      color: variables.$blue;
+      cursor: pointer;
+    }
+    button {
+      @include mixins.button(
+        variables.$blue,
+        1rem,
+        variables.$white,
+        0.7rem,
+        2.5rem,
+        20px,
+        2px solid variables.$blue
+      );
+      margin-left: 1rem;
+    }
+  }
+}

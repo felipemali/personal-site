@@ -1,0 +1,85 @@
+@use 'variables';
+
+@mixin container($w, $pv, $ph) {
+  width: $w;
+  max-width: variables.$max-width;
+  padding: 1.5rem 0;
+  padding: $pv $ph;
+  margin: auto;
+}
+@mixin button($c, $f, $bc, $pv, $ph, $r, $b) {
+  color: $c;
+  font-size: $f;
+  background-color: $bc;
+  padding: $pv $ph;
+  border: $b;
+  border-radius: $r;
+}
+@mixin font-properties($size, $weight: normal) {
+  font-size: $size;
+  font-weight: $weight;
+}
+@mixin box-shadow($x, $y, $blur, $color) {
+  box-shadow: $x $y $blur $color;
+}
+
+@mixin font-family($family) {
+  font-family: $family, sans-serif;
+}
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin card($width) {
+  background-color: variables.$white;
+  width: $width;
+  min-height: 250px;
+  margin: 2rem auto;
+  border-radius: 5px;
+  padding: 1rem 1.2rem;
+
+  @media screen and (min-width: variables.$breakpoint-xl) {
+    margin: 3rem 0 3rem 3rem;
+    height: 400px;
+  }
+}
+@mixin article($width) {
+  background-color: variables.$white;
+  width: $width;
+  min-height: 250px;
+  margin: 1.5rem auto;
+  border-radius: 5px;
+  padding: 1rem 1.2rem;
+  @media screen and (min-width: variables.$breakpoint-xl) {
+    margin: 3rem 0 3rem 3rem;
+  }
+}
+//articlenew
+@mixin articlenew($width) {
+  background-color: variables.$white;
+  width: $width;
+  min-height: 250px;
+  margin: 1.5rem auto;
+  border-radius: 5px;
+  padding: 1rem 1.2rem;
+  position: relative;
+  @media screen and (min-width: variables.$breakpoint-xl) {
+    margin: 3rem 0 3rem 3rem;
+  }
+  &::before {
+    content: 'Novo';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}

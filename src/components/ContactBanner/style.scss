@@ -1,0 +1,49 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+@use '../../styles/fonts';
+
+.contact-banner {
+  @include mixins.container(100%, 0, 1rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .contact-banner-details {
+    line-height: 2;
+    p {
+      @include mixins.font-properties(2rem, 600);
+      @include mixins.font-family('Roboto Condensed Italic');
+    }
+
+    .contact-banner-name-dev {
+      @include mixins.font-properties(3rem);
+      @include mixins.font-family('Roboto Condensed Medium');
+      line-height: 1;
+      background: linear-gradient(50deg, #052555, #0666c5 55%, #0580f2);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .contact-banner-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+    margin-top: 1rem;
+
+    .contact-banner-container-svg {
+      border: 2px solid transparent;
+      border-image: linear-gradient(to right, #1e3a8a, #3b82f6);
+      border-image-slice: 1;
+      padding: 0.1rem 0.7rem;
+    }
+    .contact-banner-container-svg svg {
+      margin-top: 0.6rem;
+    }
+  }
+  .contact-banner-image img {
+    width: 780px;
+  }
+}
