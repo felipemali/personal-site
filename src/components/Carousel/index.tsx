@@ -8,8 +8,9 @@ export const Carousel = () => {
   return (
     <div className="carousel">
       <Slider {...settings}>
-        {svgsCarousel.map((s) => (
+        {svgsCarousel.map((s, index) => (
           <svg
+            key={index}
             xmlns="http://www.w3.org/2000/svg"
             viewBox={s.view}
             width={50}

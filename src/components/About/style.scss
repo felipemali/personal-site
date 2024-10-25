@@ -9,14 +9,45 @@
   justify-content: space-between;
   align-items: center;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1279px) {
+    justify-content: space-evenly;
+  }
+
   .about-image img {
     width: 600px;
     border-radius: 50%;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+    @media screen and (min-width: 650px) and (max-width: 768px) {
+      width: 70%;
+      display: block;
+      margin: auto;
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1279px) {
+      width: 200px;
+    }
+    @media screen and (min-width: 1280px) and (max-width: 1366px) {
+      width: 60%;
+    }
+    @media screen and (min-width: 1367px) and (max-width: 1600px) {
+      width: 60%;
+    }
   }
   .about-text {
     width: 100%;
     max-width: 850px;
     line-height: 1.5;
+
+    @media screen and (min-width: 769px) and (max-width: 1279px) {
+      width: 60%;
+    }
 
     h1 {
       @include mixins.font-properties(3rem, 600);
@@ -26,10 +57,26 @@
       background-clip: text;
       -webkit-text-fill-color: transparent;
       text-align: right;
+
+      @media screen and (min-width: variables.$breakpoint-sm) and (max-width: variables.$breakpoint-lg) {
+        text-align: center;
+      }
+      @media screen and (min-width: 769px) and (max-width: 1279px) {
+        text-align: center;
+      }
     }
     p,
     span {
       @include mixins.font-properties(1.5rem);
+
+      @media screen and (max-width: 768px) {
+        @include mixins.font-properties(1.3rem);
+        text-align: center;
+      }
+
+      @media screen and (min-width: 769px) and (max-width: 1279px) {
+        @include mixins.font-properties(1.3rem);
+      }
     }
     span {
       color: variables.$blue;

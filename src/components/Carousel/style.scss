@@ -1,3 +1,7 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+@use '../../styles/fonts';
+
 .carousel {
   border-top: 2px solid transparent;
   border-bottom: 2px solid transparent;

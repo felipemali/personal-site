@@ -40,8 +40,8 @@ export const ContactBanner = () => {
         <p>{animetedText}</p>
 
         <div className="contact-banner-icons">
-          {svgs.map((s) => (
-            <div className="contact-banner-container-svg">
+          {svgs.map((s, index) => (
+            <div className="contact-banner-container-svg" key={index}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox={s.view}

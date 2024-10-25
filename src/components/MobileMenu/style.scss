@@ -1,0 +1,265 @@
+@use '../../styles/variables';
+@use '../../styles/fonts';
+@use '../../styles/mixins';
+@import '../../styles/global';
+
+nav {
+  @media screen and (min-width: variables.$breakpoint-xl) {
+    display: block;
+    z-index: 1;
+    position: relative;
+  }
+}
+.container {
+  max-width: 1050px;
+  width: 90%;
+  margin: auto;
+}
+.header-name {
+  span {
+    width: 150px;
+    color: variables.$blue;
+    @include mixins.font-family('Allura Regular');
+    @include mixins.font-properties(2.5rem);
+  }
+}
+
+// .navbar {
+//   width: 100%;
+//   padding: 0.7rem 0 2rem 0;
+
+//   @media screen and (min-width: variables.$breakpoint-xl) {
+//     box-shadow: 0 3px 5px variables.$darkk;
+//   }
+// }
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+}
+
+.navbar .menu-items {
+  display: flex;
+  z-index: 1;
+}
+
+.navbar .nav-container li {
+  list-style: none;
+}
+
+.navbar .nav-container a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+  color: variables.$white;
+  @include mixins.font-properties(1.5rem);
+}
+
+.navbar .nav-container a:hover {
+  font-weight: bolder;
+}
+
+.nav-container {
+  display: block;
+  position: relative;
+  height: 60px;
+}
+
+.nav-container .checkbox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+
+  // B.O do menu ta aquiiiiiiiiiiiiiiiiiiiiiiii
+  @media screen and (max-width: variables.$breakpoint-xl) {
+    left: 90%;
+  }
+}
+
+.nav-container .hamburger-lines {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  // top: 17px; antigo
+
+  // left: 20px; o antigo
+  left: -5%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: variables.$white;
+
+  @media screen and (max-width: variables.$breakpoint-xl) {
+    left: 90%;
+    top: 25px;
+  }
+  @media screen and (min-width: variables.$breakpoint-xl) {
+    left: -5%;
+    top: 10px;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+  .logo-screen-large {
+    top: 8px;
+  }
+}
+
+.nav-container .hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: variables.$white;
+}
+
+.nav-container .hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+  //aquiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+  padding-top: 0.5rem;
+  height: 40vh;
+  width: 100%;
+  // transform: translate(-150%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: -40px;
+  padding-left: 50px;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+
+  @media screen and (max-width: variables.$breakpoint-xl) {
+    position: absolute;
+    width: 170px;
+    // left: 53%;
+    left: 25%;
+
+    height: 20vh;
+    padding-top: 4rem;
+    transform: translate(300%);
+    border-radius: 5px;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  @media screen and (min-width: variables.$breakpoint-xl) {
+    flex-direction: row;
+  }
+  @media screen and (min-width: variables.$breakpoint-md) and (max-width: variables.$breakpoint-xl) {
+    left: 25%;
+
+    // left: 75%;
+    // top: 53%;
+  }
+}
+
+.navbar .menu-items li {
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  @media screen and (min-width: variables.$breakpoint-xl) {
+    flex-direction: row;
+    margin-right: 3rem;
+    height: 60px;
+  }
+
+  @media screen and (max-width: variables.$breakpoint-xl) {
+    border-top: 0.5px solid variables.$gray-dark;
+    background-color: variables.$darkk;
+    width: 80%;
+    margin-left: 2rem;
+  }
+}
+.navbar .menu-items li:last-child {
+  @media screen and (max-width: variables.$breakpoint-xl) {
+    border-bottom: 1px solid variables.$gray-dark;
+  }
+}
+.navbar .menu-items li a {
+  display: block;
+  text-align: center;
+  @media screen and (max-width: variables.$breakpoint-xl) {
+    @include mixins.font-properties(1.2rem);
+    @include mixins.font-family('Roboto Boldd');
+    z-index: 10;
+  }
+}
+.navbar .menu-items li:first-child {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.navbar .menu-items li:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.logo {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  right: 15px;
+  font-size: 1.2rem;
+  color: #0e2431;
+
+  @media screen and (min-width: variables.$breakpoint-xl) {
+    left: 100%;
+  }
+}
+
+.nav-container input[type='checkbox']:checked ~ .menu-items {
+  transform: translateX(0);
+}
+
+.nav-container input[type='checkbox']:checked ~ .hamburger-lines .line1 {
+  transform: rotate(45deg);
+}
+
+.nav-container input[type='checkbox']:checked ~ .hamburger-lines .line2 {
+  transform: scaleY(0);
+}
+
+.nav-container input[type='checkbox']:checked ~ .hamburger-lines .line3 {
+  transform: rotate(-45deg);
+}
+
+.warning p {
+  color: red;
+  @include mixins.font-properties(1.2rem);
+}
+
+// .nav-container input[type="checkbox"]:checked ~ .logo{
+//   display: none;
+// }
+.logo1 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}

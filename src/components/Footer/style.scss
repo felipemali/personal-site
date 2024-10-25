@@ -1,0 +1,100 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+@use '../../styles/fonts';
+
+footer {
+  @include mixins.container(100%, 0, 1rem);
+  border-top: 4px solid variables.$blue;
+  //margin de 12rem aqui
+  margin-top: 12rem;
+
+  .footer-container {
+    @include mixins.container(80%, 0, 1rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+
+    @media screen and (max-width: 768px) {
+      @include mixins.container(100%, 0, 1rem);
+      flex-direction: column;
+    }
+  }
+  .footer-details {
+    padding: 1rem;
+
+    h3 {
+      @include mixins.font-properties(3rem, 600);
+      background: linear-gradient(50deg, #052555, #0666c5 55%, #0580f2);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: left;
+
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
+    }
+    p {
+      @include mixins.font-family('Roboto Condensed ExtraBold');
+    }
+
+    .footer-curriculo {
+      @include mixins.font-family('Roboto Condensed SemiBold');
+      @include mixins.button(
+        variables.$blue,
+        1rem,
+        variables.$white,
+        0.7rem,
+        2.5rem,
+        20px,
+        2px solid variables.$blue
+      );
+      transition: transform 0.5s ease;
+      margin-top: 1rem;
+      display: block;
+      width: 30%;
+
+      @media screen and (max-width: 768px) {
+        width: 60%;
+        text-align: center;
+      }
+      @media screen and (min-width: 769px) {
+        width: 100%;
+        text-align: center;
+      }
+      @media screen and (min-width: 1213px) {
+        width: 68%;
+      }
+    }
+    .footer-curriculo:hover {
+      cursor: pointer;
+      transform: scale(1.01);
+    }
+  }
+  .footer-container-wpp {
+    margin: 1rem 0 0.5rem 0;
+  }
+  .footer-container-wpp,
+  .footer-container-insta {
+    a {
+      display: flex;
+      align-items: center;
+      color: variables.$white;
+      @media screen and (max-width: variables.$breakpoint-xl) {
+        margin-bottom: 1rem;
+        @include mixins.font-properties(1.1rem, 600);
+      }
+
+      span {
+        padding-left: 0.3rem;
+      }
+    }
+  }
+
+  .footer-area-form {
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+  }
+}
