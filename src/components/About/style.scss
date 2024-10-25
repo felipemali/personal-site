@@ -70,7 +70,7 @@
       @include mixins.font-properties(1.5rem);
 
       @media screen and (max-width: 768px) {
-        @include mixins.font-properties(1.3rem);
+        @include mixins.font-properties(1.18rem);
         text-align: center;
       }
 

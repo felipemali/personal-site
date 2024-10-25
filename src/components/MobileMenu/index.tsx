@@ -7,7 +7,7 @@ export const MobileMenu = () => {
     <nav>
       <div className="navbar">
         <div className="container nav-container">
-          {/* <input className="checkbox" type="checkbox" name="" id="" /> */}
+          <input className="checkbox" type="checkbox" name="" id="" />
 
           <div className="header-name">
             <span>s Felipe.Dev</span>
@@ -18,7 +18,7 @@ export const MobileMenu = () => {
                 <Link to={link}>{name}</Link>
               </li>
             ))}
-          </div>
+          </div> */}
           <div className="hamburger-lines">
             {innerWidth <= 1360 && (
               <>
@@ -27,7 +27,7 @@ export const MobileMenu = () => {
                 <span className="line line3"></span>
               </>
             )}
-          </div> */}
+          </div>
         </div>
       </div>
     </nav>

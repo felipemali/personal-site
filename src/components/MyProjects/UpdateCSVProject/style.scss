@@ -12,7 +12,7 @@
 
   @media screen and (max-width: 768px) {
     flex-direction: column-reverse;
-    margin-top: 8rem;
+    margin-top: 6rem;
   }
   @media screen and (min-width: 769px) and (max-width: 900px) {
     flex-direction: column;
@@ -74,6 +74,11 @@
     @include mixins.font-properties(1rem, 600);
     color: variables.$white;
 
+    @media screen and (max-width: 768px) {
+      @include mixins.font-properties(0.88rem, 600);
+      color: variables.$primary;
+    }
+
     @media screen and (min-width: 1280px) and (max-width: 1366px) {
       margin-left: 5rem;
     }
@@ -83,7 +88,8 @@
 
     @media screen and (max-width: 768px) {
       text-align: center;
-      margin-top: 1rem;
+      margin-top: 0.5rem;
+      @include mixins.font-properties(1.18rem, 600);
     }
     @media screen and (min-width: 769px) and (max-width: 900px) {
       @include mixins.font-properties(1.2rem);

@@ -7,16 +7,28 @@
   border-top: 4px solid variables.$blue;
   //margin de 12rem aqui
   margin-top: 8rem;
+  @media screen and (max-width: 768px) {
+    margin-top: 4rem;
+  }
 
   h1 {
     @include mixins.font-family('Roboto Condensed ExtraBold');
     @include mixins.font-properties(3rem, 600);
     text-align: center;
     margin: 1rem 0 2rem 0;
+
+    @media screen and (max-width: 768px) {
+      @include mixins.font-properties(2.5rem, 600);
+    }
   }
   h5 {
     @include mixins.font-properties(1rem, 600);
-    color: variables.$white;
+    color: variables.$primary;
+
+    @media screen and (max-width: 768px) {
+      @include mixins.font-properties(0.88rem, 600);
+      color: variables.$primary;
+    }
   }
   .my-projects-container {
     display: flex;
@@ -83,9 +95,9 @@
       @include mixins.font-properties(1.5rem, 600);
 
       @media screen and (max-width: 768px) {
-        @include mixins.font-properties(1.3rem, 600);
+        @include mixins.font-properties(1.18rem, 600);
         text-align: center;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
       }
       @media screen and (min-width: 769px) and (max-width: 900px) {
         @include mixins.font-properties(1.2rem);

@@ -42,15 +42,17 @@ export const ContactBanner = () => {
         <div className="contact-banner-icons">
           {svgs.map((s, index) => (
             <div className="contact-banner-container-svg" key={index}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox={s.view}
-                width={40}
-                height={40}
-                fill="#fff"
-              >
-                <path d={s.d} />
-              </svg>
+              <a href={s.link}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox={s.view}
+                  width={40}
+                  height={40}
+                  fill="#fff"
+                >
+                  <path d={s.d} />
+                </svg>
+              </a>
             </div>
           ))}
         </div>

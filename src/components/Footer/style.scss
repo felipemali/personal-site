@@ -8,6 +8,10 @@ footer {
   //margin de 12rem aqui
   margin-top: 12rem;
 
+  @media screen and (max-width: 768px) {
+    margin-top: 6rem;
+  }
+
   .footer-container {
     @include mixins.container(80%, 0, 1rem);
     display: flex;
