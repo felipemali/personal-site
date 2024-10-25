@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-import { items } from '../../helpers/itemsMenu';
 import './style.scss';
 
 export const MobileMenu = () => {
