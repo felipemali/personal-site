@@ -6,7 +6,7 @@ type HeaderProps = {
   projectsRef: React.RefObject<HTMLDivElement>;
   contactRef: React.RefObject<HTMLDivElement>;
 };
-//aaa
+//eeeee
 export const Header = ({ aboutRef, projectsRef, contactRef }: HeaderProps) => {
   const handleScrollToAbout = (e: React.RefObject<HTMLDivElement>) => {
     if (e.current) {
