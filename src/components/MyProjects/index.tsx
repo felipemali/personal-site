@@ -1,4 +1,5 @@
 import { LopesAdvocacia } from './LopesAdvocacia';
+import { TodoList } from './ToDoList';
 import { UpdateCSVProject } from './UpdateCSVProject';
 
 type MyProjectsProps = {
@@ -9,6 +10,7 @@ export const MyProjects = ({ projectsRef }: MyProjectsProps) => {
     <>
       <LopesAdvocacia projectsRef={projectsRef} />
       <UpdateCSVProject />
+      <TodoList />
     </>
   );
 };
