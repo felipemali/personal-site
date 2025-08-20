@@ -1,5 +1,3 @@
-![alt text](image.png)
-
 # Projeto Pessoal - Portfólio
 
 ### Link do projeto
