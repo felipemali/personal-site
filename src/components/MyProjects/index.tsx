@@ -1,4 +1,5 @@
 import { LopesAdvocacia } from './LopesAdvocacia';
+import { MarvelHQs } from './MarvelHQs';
 import { TodoList } from './ToDoList';
 import { UpdateCSVProject } from './UpdateCSVProject';
 
@@ -11,6 +12,7 @@ export const MyProjects = ({ projectsRef }: MyProjectsProps) => {
       <LopesAdvocacia projectsRef={projectsRef} />
       <UpdateCSVProject />
       <TodoList />
+      <MarvelHQs />
     </>
   );
 };

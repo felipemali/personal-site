@@ -1,0 +1,108 @@
+@use '../../../styles/variables';
+@use '../../../styles/mixins';
+@use '../../../styles/fonts';
+
+.update-csv {
+  @include mixins.container(100%, 0, 1rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  //margin de 12rem aqui
+  margin-top: 12rem;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    margin-top: 6rem;
+  }
+  @media screen and (min-width: 769px) and (max-width: 900px) {
+    flex-direction: column;
+    margin-top: 8rem;
+  }
+  @media screen and (min-width: 901px) and (max-width: 1279px) {
+    justify-content: space-evenly;
+  }
+
+  img {
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 1px 2px 4px 3px #eee;
+    border-radius: 10px;
+
+    @media screen and (min-width: 769px) and (max-width: 1279px) {
+      width: 400px;
+    }
+    @media screen and (min-width: 1280px) and (max-width: 1366px) {
+      width: 80%;
+      margin-left: 5rem;
+    }
+  }
+  .update-csv-text {
+    max-width: 850px;
+    width: 100%;
+
+    @media screen and (min-width: 769px) and (max-width: 1279px) {
+      width: 60%;
+    }
+    @media screen and (min-width: 901px) and (max-width: 1279px) {
+      width: 50%;
+    }
+    @media screen and (min-width: 1280px) and (max-width: 1366px) {
+      width: 80%;
+    }
+  }
+  h2 {
+    @include mixins.font-properties(3rem, 600);
+    background: linear-gradient(50deg, #052555, #0666c5 55%, #0580f2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: left;
+
+    @media screen and (max-width: 768px) {
+      @include mixins.font-properties(2.5rem, 600);
+      text-align: center;
+      margin-top: 1rem;
+    }
+    @media screen and (min-width: 769px) and (max-width: 1279px) {
+      text-align: center;
+    }
+    @media screen and (min-width: 901px) and (max-width: 1279px) {
+      @include mixins.font-properties(2.2rem, 600);
+    }
+  }
+  h5 {
+    @include mixins.font-properties(1rem, 600);
+    color: variables.$white;
+
+    @media screen and (max-width: 768px) {
+      @include mixins.font-properties(0.88rem, 600);
+      color: variables.$primary;
+    }
+
+    @media screen and (min-width: 1280px) and (max-width: 1366px) {
+      margin-left: 5rem;
+    }
+  }
+  p {
+    @include mixins.font-properties(1.5rem, 600);
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      margin-top: 0.5rem;
+      @include mixins.font-properties(1.18rem, 600);
+    }
+    @media screen and (min-width: 769px) and (max-width: 900px) {
+      @include mixins.font-properties(1.2rem);
+      text-align: center;
+    }
+    @media screen and (min-width: 769px) and (max-width: 1279px) {
+      @include mixins.font-properties(1.2rem);
+      text-align: center;
+    }
+  }
+  span {
+    @include mixins.font-properties(1.5rem);
+    color: variables.$blue;
+    padding-left: 0.5rem;
+  }
+}
