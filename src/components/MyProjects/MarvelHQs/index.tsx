@@ -17,6 +17,7 @@ export const MarvelHQs = () => {
       controls.start('hidden');
     }
   }, [controls, inView]);
+
   return (
     <motion.div
       className="update-csv"
