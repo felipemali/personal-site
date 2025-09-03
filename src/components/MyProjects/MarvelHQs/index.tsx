@@ -17,6 +17,7 @@ export const MarvelHQs = () => {
       controls.start('hidden');
     }
   }, [controls, inView]);
+  console.log('');
 
   return (
     <motion.div
