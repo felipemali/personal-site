@@ -1,50 +1,66 @@
-# React + TypeScript + Vite
+# Projeto Pessoal - Portfólio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Link do projeto
 
-Currently, two official plugins are available:
+- Para acessar o o site clique "[aqui](https://felipedev-nine.vercel.app/)"
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este é meu projeto pessoal desenvolvido para servir como portfólio e currículo online. Nele compartilho informações sobre mim, minhas experiências, projetos e formas de contato. O projeto foi desenvolvido utilizando Reactjs, Typescript, Vite e SASS para estilização.
+<br>
+<br>
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
-## Expanding the ESLint configuration
+## 🏗️ Arquitetura
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Estrutura do Projeto
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+src/
+├── components/      # Componentes reutilizáveis
+├── pages/           # Páginas principais
+├── assets/          # Imagens, ícones e fontes personalizadas
+├── styles/          # Estilos globais e SCSS organizados
+├── fonts/           # Todas fontes
+├── hooks/           # Hooks de animação
+├── helpers/         # Dados estáticos
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🛠️ Tecnologias
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **Typescript 5.5.3** - Linguagem
+- **React 18.3.1** - Biblioteca base
+- **Vite 5.4.1** - Ferramenta de build
+- **Scss 1.79.3** - Estilização
+- **Google Fonts** - Fontes personalizadas
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## 🎨 Destaques
+
+- Layout moderno, responsivo e minimalista.
+  Sessão dedicada a projetos desenvolvidos.
+- Página sobre mim, apresentando formação, trajetória e interesses.
+- Estilização com SCSS e uso de variáveis/mixins para consistência.
+
+## 🚀 Execução
+
+### Desenvolvimento
+
+```bash
+# Clonar repositório
+ git clone <repository-url>
+ cd personal-site
+
+# Instalar dependências do projeto
+ pnpm install
+
+# Executar Projeto
+ pnpm dev
 ```
+
+## 📌 Objetivo
+
+- Apresentar minhas habilidades como desenvolvedor web.
+- Centralizar informações sobre mim e minha carreira.
+- Reunir e exibir meus projetos de forma organizada.
+
