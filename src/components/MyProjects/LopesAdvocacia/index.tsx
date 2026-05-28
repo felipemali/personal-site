@@ -45,10 +45,12 @@ export const LopesAdvocacia = ({ projectsRef }: LopesAdvocaciaProps) => {
           <h2>Lopes Advocacia</h2>
           <p>
             Liderei o desenvolvimento de um website personalizado para um
-            cliente advogado, onde utilizei meu domínio em
-            <span>JavaScript, React.js, Vite, Typescript e Sass</span>,
-            oferecendo serviço de qualidade com minha experiência nessas
-            tecnologias.
+            cliente da área jurídica, utilizando React.js, Vite e Sass. O
+            projeto contribuiu para aumentar a presença digital do escritório,
+            facilitar a captação de novos clientes e melhorar a disponibilização
+            de informações sobre serviços jurídicos, onde utilizei meu domínio
+            em
+            <span>JavaScript, React.js, Vite, Typescript e Sass</span>.
           </p>
         </div>
       </motion.div>
