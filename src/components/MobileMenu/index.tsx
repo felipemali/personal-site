@@ -10,13 +10,7 @@ export const MobileMenu = () => {
           <div className="header-name">
             <span>s Felipe.Dev</span>
           </div>
-          {/* <div className="menu-items">
-            {items.map(({ name, link }, index) => (
-              <li key={`items-${index + 1}`}>
-                <Link to={link}>{name}</Link>
-              </li>
-            ))}
-          </div> */}
+
           <div className="hamburger-lines">
             {innerWidth <= 1360 && (
               <>
