@@ -21,7 +21,7 @@ export const Header = ({ aboutRef, projectsRef, contactRef }: HeaderProps) => {
         </div>
         <div className="header-options">
           <a href="#">
-            <span>Home</span>
+            <span>Início</span>
           </a>
           <span onClick={() => handleScrollToAbout(aboutRef)}>Sobre</span>
           <span onClick={() => handleScrollToAbout(projectsRef)}>Projetos</span>
