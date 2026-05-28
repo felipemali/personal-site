@@ -42,9 +42,9 @@ export const About = ({ reff }: AboutProps) => {
               Me Chamo Felipe Lima e sou desenvolvedor Web. Possuo habilidades
               em
               <span>
-                Javascript, React.js, Typescript, MongoDB, Sass, Bootstrap,
-                Styled-components, Jest, Cypress, CI/CD, TypeORM, Prisma, entre
-                outros.
+                Javascript, React.js, Typescript, Websocket, MongoDB, Sass,
+                Bootstrap, Styled-components, Zod, Jest, Cypress, CI/CD,
+                TypeORM, Prisma, entre outros.
               </span>
             </p>
             <p>
