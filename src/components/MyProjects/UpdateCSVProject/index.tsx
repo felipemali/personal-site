@@ -31,12 +31,14 @@ export const UpdateCSVProject = () => {
       <div className="update-csv-text">
         <h2>UpdateCSV</h2>
         <p>
-          Lidero o desenvolvimento de um aplicativo crucial para importação de
-          arquivos CSV e integração com APIs, contribuindo para a otimização do
-          processo de gestão de dados no contexto do aplicativo e-bov. Utilizei
-          ferramentas, como
-          <span>React.js, Typescript, Vite, yup e papaparse</span>, oferecendo
-          serviço de qualidade com minha experiência nessas tecnologias.
+          Aplicação PWA (Progressive Web App) criada para a integração direta
+          com balanças digitais permitindo a captura automática de dados (peso e
+          identificação) de bovinos em tempo real. Desenvolvida com React.js,
+          Vite e TypeScript no front-end, integrando-se a API REST. Utilizei Yup
+          para validação de dados e csv-parser para o processamento de arquivos
+          CSV. Contei com o suporte do GitHub Copilot para revisão de código e
+          sugestões de boas práticas, o que elevou a qualidade do
+          desenvolvimento e otimizou a gestão de dados no sistema e-Bov.
         </p>
       </div>
       <a href="https://update-csv.vercel.app/">
