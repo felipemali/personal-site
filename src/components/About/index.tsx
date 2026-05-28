@@ -48,9 +48,10 @@ export const About = ({ reff }: AboutProps) => {
               </span>
             </p>
             <p>
-              Fui vendedor por 2 anos, onde desenvolvi minhas SoftSkills, como:
-              disciplina, persistência, criatividade, estudo, resiliência,
-              escuta ativa, memória, empatia, discernimento estético e etc.
+              Fui vendedor por 2 anos, onde desenvolvi minhas habilidades
+              pessoais, como: disciplina, persistência, criatividade, estudo,
+              resiliência, escuta ativa, memória, empatia, discernimento
+              estético e etc.
             </p>
           </div>
         </div>
