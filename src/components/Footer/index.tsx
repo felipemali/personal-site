@@ -14,6 +14,7 @@ export const Footer = ({ contactRef }: ContactProps) => {
             Entre em contato se precisar tirar alguma dúvida ou contratar algum
             tipo de serviço.
           </p>
+          {/* container */}
           <div className="footer-container-wpp">
             <a href="https://api.whatsapp.com/send?phone=5567996653628">
               <svg
