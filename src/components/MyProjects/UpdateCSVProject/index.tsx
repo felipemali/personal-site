@@ -44,7 +44,7 @@ export const UpdateCSVProject = () => {
       <a href="https://update-csv.vercel.app/">
         <h5>Clique na imagem para acessar</h5>
         <div className="update-csv-image">
-          <img src={updatecsv} alt="lopes advocacia" />
+          <img src={updatecsv} alt="projeto UpdateCSV" />
         </div>
       </a>
     </motion.div>
