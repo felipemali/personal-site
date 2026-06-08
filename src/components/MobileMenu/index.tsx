@@ -8,6 +8,7 @@ export const MobileMenu = () => {
           <input className="checkbox" type="checkbox" name="" id="" />
 
           <div className="header-name">
+            {/* logo */}
             <span>s Felipe.Dev</span>
           </div>
 
