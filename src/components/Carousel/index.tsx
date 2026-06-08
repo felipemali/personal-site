@@ -7,6 +7,7 @@ import { settings } from './settingsSlider';
 export const Carousel = () => {
   return (
     <div className="carousel">
+      {/* slider */}
       <Slider {...settings}>
         {svgsCarousel.map((s, index) => (
           <svg
